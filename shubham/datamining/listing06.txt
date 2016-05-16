@@ -1,0 +1,36 @@
+SimpleXMLElement Object 
+(
+     [address] => Array
+         (
+             [0] => SimpleXMLElement Object
+                 (
+                     [@attributes] => Array
+                         (
+                             [type] => home
+                         )
+                     [street] => 1234 Main Street
+                     [city] => Baltimore
+                     [state] => MD
+                 )
+              [1] => SimpleXMLElement Object
+                 (
+                     [@attributes] => Array
+                         (
+                             [type] => work
+                         )
+                     [street] => 567 1st Street
+                     [city] => San Jose
+                     [state] => CA
+                 )
+              [2] => SimpleXMLElement Object
+                 (
+                     [@attributes] => Array
+                         (
+                             [type] => work
+                         ) 
+                     [street] => 901 Washington Ave
+                     [city] => Chicago
+                     [state] => IL
+                 )
+          )
+)

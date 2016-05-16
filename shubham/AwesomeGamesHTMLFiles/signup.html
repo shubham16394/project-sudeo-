@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Awesome Games- Sign Up</title>
+<style>
+.main{height:697px;width:1364px;background:#000000;margin:0 auto}
+.mid{height:704px;width:1364px;background:#000000;margin:0 auto}
+input[placeholder]{padding-left:10px;color:#9E9FA0;font-size:18px}
+.sign{height:40px;width:100px;border:2px solid #06F;position:relative;top:20px;left:1200px;border-radius:20px;background:white;text-align:center;font-family:Microsoft Sans Serif;color:#06F;font-size:18px;line-height:40px}
+.log{height:550px;width:400px;background:white;margin:0 auto;position:relative;top:50px;left:250px}
+.form{height:500px;width:250px;margin:0 auto}
+.name{height:80px;width:250px;margin:0 auto;font-size:30px;font-weight:bold;color:#363B3E;font-family:Microsoft Sans Serif;text-align:center;line-height:60px}
+.email{height:45px;width:236px;margin:0 auto;border:2px solid #ECEDEE}
+.logo{height:40px;width:200px;background:#2990EA;margin:0 auto;position:relative;top:80px;left:23px;border-radius:20px;font-size:19px;color:white;font-family:Microsoft Sans Serif;text-align:center;line-height:40px;position:relative;top:30px}
+</style>
+<script>
+b=true;
+function fn(){
+	if(b){document.getElementsByClassName("email")[0].style.border="2px solid #2990EA";
+	b=false;
+	}
+	else{document.getElementsByClassName("email")[0].style.border="2px solid #ECEDEE";
+	b=true;
+	}
+	}
+c=true;
+function fn1(){
+	if(c){document.getElementsByClassName("email")[1].style.border="2px solid #2990EA";
+	c=false;
+	}
+	else{document.getElementsByClassName("email")[1].style.border="2px solid #ECEDEE";
+	c=true;
+	}
+	}	
+	function fn2(){
+	if(c){document.getElementsByClassName("email")[2].style.border="2px solid #2990EA";
+	c=false;
+	}
+	else{document.getElementsByClassName("email")[2].style.border="2px solid #ECEDEE";
+	c=true;
+	}
+	}
+	function fn3(){
+	if(c){document.getElementsByClassName("email")[3].style.border="2px solid #2990EA";
+	c=false;
+	}
+	else{document.getElementsByClassName("email")[3].style.border="2px solid #ECEDEE";
+	c=true;
+	}
+	}		
+</script>
+</head>
+
+<body style="margin-top:0;margin-left:0;margin-right:0;background:#000">
+<div class="main"><div class="mid"><div class="sign"><a href="login.html" style="text-decoration:none;color:#06F">Log In</a></div>
+<div class="log">
+<div class="form"><div class="name">Sign Up Free</div><form action="isertsign.php" method="post"><input type="text" class="email" placeholder="Full Name" onMouseOver="fn()" onMouseOut="fn()" name="fname"/><input type="email" class="email" placeholder="Email" style="margin-top:15px" onMouseOver="fn1()" onMouseOut="fn1()" name="email"/>
+<input type="password" class="email" placeholder="Password" style="margin-top:15px" onMouseOver="fn2()" onMouseOut="fn2()" name="pass"/><input type="text" class="email" placeholder="Age" style="margin-top:15px" onMouseOver="fn3()" onMouseOut="fn3()" name="age"/><input type="image" class="logo" <img src="signimage.PNG"/></form><div style="margin:0 auto ;height:80px;width:250px;position:relative;top:65px;color:#5F5F5F;text-align:center;font-family:Microsoft Sans Serif;line-height:20px;font-size:15px">By signing up, you agree to our <a href="#" style="color:#2990EA;text-decoration:none">Terms of Services</a> and <a href="#" style="color:#2990EA;text-decoration:none">Privacy Policy</a></div></div>
+<h1 style="color:white;position:relative;left:-550px;top:-450px;font-family:Microsoft Sans Serif;text-align:left;font-size:50px">Your idea needs a great website, so Sign Up for free and enjoy. </h1>
+</div>
+</div>
+</div>
+</body>
+</html>

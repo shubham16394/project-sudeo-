@@ -1,0 +1,17 @@
+<locations>
+    <address>
+        <street>1234 Main Street</street>
+        <city>Baltimore</city>
+        <state>MD</state>
+    </address>
+    <address>
+        <street>567 1st Street</street>
+        <city>San Jose</city>
+        <state>CA</state>
+    </address>
+    <address>
+        <street>901 Washington Ave</street>
+        <city>Chicago</city>
+        <state>IL</state>
+    </address>
+</locations>

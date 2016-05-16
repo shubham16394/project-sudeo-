@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Awesome Games- Log In</title>
+<style>
+.main{height:697px;width:1364px;background:#000000;margin:0 auto}
+.mid{height:704px;width:1364px;background:#000000;margin:0 auto}
+input[placeholder]{padding-left:10px;color:#9E9FA0;font-size:18px}
+.sign{height:40px;width:100px;border:2px solid #06F;position:relative;top:20px;left:1200px;border-radius:20px;background:white;text-align:center;font-family:Microsoft Sans Serif;color:#06F;font-size:18px;line-height:40px}
+.mid1{height:504px;width:680px}
+.log{height:400px;width:360px;background:white;position:relative;top:52px;left:100px}
+.form{height:350px;width:250px;margin:0 auto;position:relative;top:25px}
+.name{height:80px;width:250px;margin:0 auto;font-size:30px;font-weight:bold;color:#363B3E;font-family:Microsoft Sans Serif;text-align:center;line-height:60px}
+.email{height:45px;width:250px;margin:0 auto;position:relative;top:20px}
+.logo{height:40px;width:200px;background:#2990EA;margin:0 auto;position:relative;top:80px;left:22px;border-radius:20px;font-size:19px;color:white;font-family:Microsoft Sans Serif;text-align:center;line-height:40px}
+.content{height:200px;width:600px;margin:0 auto;position:relative;top:40px;border:1px solid black;left:100px}
+</style>
+<script>
+b=true;
+function fn(){
+	if(b){document.getElementById("123").style.border="2px solid #2990EA";
+	b=false;
+	}
+	else{document.getElementById("123").style.border="2px solid #ECEDEE";
+	b=true;
+	}
+	}
+c=true;
+function fn1(){
+	if(c){document.getElementById("456").style.border="2px solid #2990EA";
+	c=false;
+	}
+	else{document.getElementById("456").style.border="2px solid #ECEDEE";
+	c=true;
+	}
+	}	
+</script>
+</head>
+
+<body style="margin-top:0;margin-left:0;margin-right:0;background:#000">
+<div class="main"><div class="mid"><div class="sign"><a href="signup.html" style="text-decoration:none;color:#06F">Sign Up</a></div><div class="mid1" style="position:relative;top:100px"><div class="content"><h1 style="color:white;font-family:Microsoft Sans Serif;font-size:50px;text-align:left">If you have an account please Log In, otherwise Sign Up for free.</h1></div><div class="log2"></div></div><div class="mid1" style="position:relative;top:-406px;left:682px">
+<div class="log"><div class="form"><div class="name">Website Log In</div><div class="email" ><form action="isertlog.php" method="post"><input type="email" id="123" style="height:45px;width:236px;border:2px solid #ECEDEE" placeholder="Email" onMouseOver="fn()" onMouseOut="fn()" name="email"/></div><div class="email" style="position:relative;top:40px"><input type="password" id="456" style="height:45px;width:236px;border:2px solid #ECEDEE" placeholder="Password" onMouseOver="fn1()" onMouseOut="fn1()" name="pass"/></div><input type="image" class="logo" <img src="logimage.PNG"/></form></div></div>
+</div>
+</div>
+</div>
+</body>
+</html>

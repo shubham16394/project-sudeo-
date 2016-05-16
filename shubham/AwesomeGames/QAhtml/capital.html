@@ -1,0 +1,141 @@
+<html>
+<head><title>CAPITAL</title>
+<style type="text/css">
+.main{max-height: 600px;max-width: 1300px}
+.mid1{height: 100px;width: 800px;position: relative;margin: 0 auto;top: -400px}
+input[placeholder]{padding-left: 10px}
+.home{height: 40px;width: 100px;border: 2px solid white;font-size: 30px;border-radius: 20px ;color: #06F;background-color: white;text-align: center;font-family:Microsoft Sans;border-color: #06F;position: relative;top:-560px;left: 200px}
+
+
+</style>
+<script>
+function go(ch){
+            	if(ch=="go home" ){
+            		document.location="../AwesomeGames.php";
+            	}
+
+
+    }
+
+</script>
+<script type="text/javascript">
+function fn(){
+var abc=document.getElementById("x").value;
+if (abc=="")
+{
+alert("Please Enter Question");
+document.act.action="#";
+}
+else
+{
+	document.act.action="../../../cgi-bin/database1.py";
+}
+}
+
+</script>
+<script type="text/javascript">
+var final_transcript = '';
+var recognizing = false;
+ 
+if ('webkitSpeechRecognition' in window) {
+ 
+  var recognition = new webkitSpeechRecognition();
+ 
+  recognition.continuous = true;
+  recognition.interimResults = true;
+ 
+  recognition.onstart = function() {
+    recognizing = true;
+    document.getElementById("p").innerHTML="Listening";
+  };
+ 
+  recognition.onerror = function(event) {
+    //alert("not recognizing");
+    document.getElementById("p").innerHTML="Internet Connection Problem";
+    console.log(event.error);
+  };
+ 
+  recognition.onend = function() {
+    recognizing = false;
+    document.getElementById("p").innerHTML="Not Listening";
+  };
+ 
+  recognition.onresult = function(event) {
+    var interim_transcript = '';
+    for (var i = event.resultIndex; i < event.results.length; ++i) {
+      if (event.results[i].isFinal) {
+        final_transcript += event.results[i][0].transcript;
+      } else {
+        interim_transcript += event.results[i][0].transcript;
+      }
+    }
+    //final_transcript = capitalize(final_transcript);
+    final_span.innerHTML = linebreak(final_transcript);
+    interim_span.innerHTML = linebreak(interim_transcript);
+    
+  };
+}
+ 
+var two_line = /\n\n/g;
+var one_line = /\n/g;
+function linebreak(s) {
+  return s.replace(two_line, '<p></p>').replace(one_line, '<br>');
+}
+ 
+function capitalize(s) {
+  return s.replace(s.substr(0,1), function(m) { return m.toUpperCase(); });
+}
+ 
+function startDictation(event) {
+  if (recognizing) {
+    var xyz=final_transcript;
+    document.getElementById("xyz").innerHTML=xyz;
+    recognition.stop();
+    if (xyz=="go home")
+    {
+   go(xyz);
+}
+else
+{
+	window.location="../../../cgi-bin/database1.py?question=" + xyz;
+}
+    
+    return ;
+  }
+  final_transcript = '';
+  recognition.lang = 'en-US';
+  recognition.start();
+  final_span.innerHTML = '';
+  interim_span.innerHTML = '';
+}
+</script>
+
+
+</head>
+<body style="margin:0;background:#000">
+<div class="main" ><img src="download-wall-world-map-of-the-countries-6446.jpg" style="height:650px;width:1300px"><div class="home"><a  href="../AwesomeGames.php" style="text-decoration:none;color:#06F">Home</a></div><div class="mid1"><form action="" method="get" name="act"><input id="x" type="text" style="height:30px;width:500px;font-size:20px;position:relative;left:140px;top:50px" name="question" placeholder="Enter your Question here...."/><input type="submit" style="height:30px;width:100px;font-size:20px;position:relative;left:142px;top:50px" value="SEARCH" onClick="fn()"></form>
+
+<div id="speak" style="border-radius:10px;height:200px;width:300px;background:rgba(255,255,255,1);border:solid black 2px;position:relative;top:-250px;left:600px">
+            
+            <input type="image" id="start_button"  src="../microphone.png" style="height:70px" onclick="startDictation()"/>
+            <div id="xyz" style="display:none" name="question" style="padding-left:10px;font-size:20px"></div>
+    
+            <div id="results">
+                <p id="p" style="padding-left:10px;font-size:20px">Click Mic</p>
+  <span id="final_span" class="final" style="padding-left:10px;font-size:20px"></span>
+  <span id="interim_span" class="interim" style="padding-left:0px;font-size:20px"></span>
+</div>
+<div id="tts" style="display:None"></div>
+
+        </div>
+        </div>
+</div></div>
+
+
+
+
+</body>
+
+
+
+</html>
