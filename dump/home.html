@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Home</title>
+
+
+	<script type="text/javascript">
+	function fn(){
+	var abc=document.getElementById("x").value;
+	if(abc=="")
+		{alert("nothing is there");
+	}
+	
+	document.getElementById("y").innerHTML=abc + "chutiya";
+	}
+	</script>
+	</head>
+
+<body>
+<div style="height:50px;width:100px;border:2px solid black">
+
+	Question: <input id="x" type="text" name="question"/><br/>
+	           <input type="submit" value="Submit" onClick="fn()"/>
+	           <p id="y">jsdfhsjdf</p>
+</div>
+
+
+
+
+<!--</form>-->
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+<head></head>
+
+
+
+<body>
+
+<input onclick='responsiveVoice.speak("Hello World this is a demo text to speech recognition api file");' type='button' value= 'Play' />
+<div id="audio">what is happening</div>
+<input type="button" onclick="fn()" value="chu" />
+
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+
+</script>
+
+<script src="speakClient.js">
+
+</script>
+<script src="speakGenerator.js"></script>
+<script src="speakWorker.js"></script>
+<script>
+function fn(){
+	x=document.getElementById("audio").innerHTML="shreya is chutiya";
+
+
+}
+
+function call(){
+	x="hi my name is sudo,don't use offensive words, chromium is not supporting text to speech"
+	var msg = new SpeechSynthesisUtterance(x);
+    window.speechSynthesis.speak(msg);
+    document.write("kya chutiyapa hai");
+}
+
+</script>
+
+
+</body>
+</html>
